@@ -1,7 +1,13 @@
 <p>employee works!</p>
-<form [formGroup]= "formGroup">
+<form [formGroup]= "formGroup" (ngSubmit)= "addSumbit()">
     <label for=""></label>
     <input type="text" name="name" formControlName= "name">
     <input type="text" name="functionEmployee" formControlName = "functionEmployee">
-    <button type="button"> Enviar</button>
+    <button type="submit"> Enviar</button>
 </form>
+<p *ngIf="isInvaled"> Formulario Erroneo </p>
+<div>
+    <p>Employes</p>
+    <div *ngFor="let employee of employees">{{employee.fullname}}</div>
+</div>
+<button (click)="Click()">Obtener</button>
