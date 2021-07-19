@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Employee } from '../interfaces/employee';
 import { EmployeesServiceService } from '../services/employees-service.service';
 
+// componete de empleados 
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -31,7 +32,7 @@ export class EmployeeComponent implements OnInit {
       return;      
     } 
     this.isInvaled= true;
-    console.log("Create Users");
+    console.log("Usuario Creado");
   
   }
   public listEmployee(){
