@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Running Aplication 
+
+First step : Clone the repository 
+ 
+second step: start the Api-rest with the command ng serve
+ 
+third step:  The server must be up to consume the application service in Angular 
