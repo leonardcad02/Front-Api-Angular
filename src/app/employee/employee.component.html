@@ -1,13 +1,18 @@
-<p>employee works!</p>
-<form [formGroup]= "formGroup" (ngSubmit)= "addSumbit()">
-    <label for=""></label>
-    <input type="text" name="name" formControlName= "name">
-    <input type="text" name="functionEmployee" formControlName = "functionEmployee">
-    <button type="submit"> Enviar</button>
-</form>
-<p *ngIf="isInvaled"> Formulario Erroneo </p>
-<div>
-    <p>Employes</p>
+<section class="form-register">
+    
+    <h4>Formulario de Crear y listar empleados</h4>
+    <form [formGroup]= "formGroup" (ngSubmit)= "addSumbit()">
+        <p>Nombre Completo</p>
+        <input class="controls" type="text" name="name" formControlName= "name">
+        <p>funcion del empleado</p>
+        <input class="controls" type="text" name="functionEmployee" formControlName = "functionEmployee">
+        <button class="botons" type="submit">Crear Empleados</button>         
+        <button (click)="listEmployee()" class="botons">Listar Empleados</button>       
+    </form>
+    <p>Lista de los empleados</p>
     <div *ngFor="let employee of employees">{{employee.fullname}}</div>
-</div>
-<button (click)="Click()">Obtener</button>
+</section>
+
+    
+
+

@@ -16,8 +16,8 @@ export class EmployeeComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private employeeService: EmployeesServiceService) {
     this.formGroup = this.formBuilder.group({
-      name: ['Cristian', Validators.required],
-      functionEmployee: ['Development', Validators.required]  
+      name: [' ', Validators.required],
+      functionEmployee: [' ', Validators.required]  
     });
    }
   
@@ -27,24 +27,21 @@ export class EmployeeComponent implements OnInit {
   public addSumbit() {    
     if(this.formGroup.invalid){
       console.log("Formulario Erroneo!");
-      this.isInvaled= true;
+      this.isInvaled= false;
       return;      
     } 
-    this.isInvaled= false;
+    this.isInvaled= true;
+    console.log("Create Users");
   
   }
-  public Click(){
+  public listEmployee(){
     this.employeeService.getEmployees().subscribe(data => {
-
       this.employees = data.information;
       console.log(this.employees);
     },
     err => {
       console.log(err);
     });
-
-   
-  }
   
 
-}
+}}
